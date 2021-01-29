@@ -5,6 +5,7 @@
 #define HEIGHT 800
 #define GRAVITY 4.0f
 #define FLAPSTRENGTH 1.5f
+#define ANGLESTRENGTH 10.0f
 
 struct Bird {
 	float x;
@@ -61,7 +62,7 @@ int main() {
 		destRec.x = bird.x;
 		destRec.y = bird.y;
 
-		double angle = bird.yVel * 10;
+		double angle = bird.yVel * ANGLESTRENGTH;
 
 		lastTime = curTime;
 
